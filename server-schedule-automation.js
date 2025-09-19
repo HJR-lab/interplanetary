@@ -32,7 +32,9 @@ function processExcelSchedule() {
             schedule[row.Day].timeSlots.push({
                 time: row.Time,
                 band: row.Band,
-                genre: row.Genre
+                genre: row.Genre,
+                instagram: row.Instagram || '',
+                thumbnail: row.Thumbnail || ''
             });
         });
 

@@ -555,11 +555,25 @@ function createDaySchedule(dayData) {
 
     let timeSlotsHTML = '';
     dayData.timeSlots.forEach(slot => {
+        const thumbnailHTML = slot.thumbnail ? `
+            <div class="band-thumbnail">
+                <img src="${slot.thumbnail}" alt="${slot.band}" onerror="this.style.display='none'">
+            </div>
+        ` : '';
+
+        const instagramHTML = slot.instagram ? `
+            <span class="instagram"><a href="https://instagram.com/${slot.instagram.replace('@', '')}" target="_blank">${slot.instagram}</a></span>
+        ` : '';
+
         timeSlotsHTML += `
             <div class="time-slot">
-                <span class="time">${slot.time}</span>
-                <span class="band">${slot.band}</span>
-                <span class="genre">${slot.genre}</span>
+                ${thumbnailHTML}
+                <div class="slot-info">
+                    <span class="time">${slot.time}</span>
+                    <span class="band">${slot.band}</span>
+                    <span class="genre">${slot.genre}</span>
+                    ${instagramHTML}
+                </div>
             </div>
         `;
     });

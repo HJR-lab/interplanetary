@@ -71,7 +71,7 @@ A sophisticated, modern website for The Mars Bar restaurant and cocktail lounge 
 ### Advanced Features Setup
 
 #### Live Band Schedule (Excel Integration)
-1. Create `schedule.xlsx` with columns: Day, Time, Band, Genre
+1. Create `schedule.xlsx` with columns: Day, Time, Band, Genre, Instagram, Thumbnail
 2. Set up server endpoint at `/api/schedule`
 3. Schedule updates automatically every Sunday 6 PM
 4. See `schedule-excel-setup.md` for details
@@ -128,9 +128,9 @@ Weekly live band schedule with:
 
 ### Excel Structure
 ```
-Day | Time              | Band                    | Genre
-SUN | 8.30PM - 10.15PM | Lunar Echoes feat. Solis | Indie Pop / Dreamwave
-MON | 8.30PM - 12.15AM | The Crimson Meteors     | Indie Rock
+Day | Time              | Band                    | Genre                  | Instagram        | Thumbnail
+SUN | 8.30PM - 10.15PM | Lunar Echoes feat. Solis | Indie Pop / Dreamwave | @lunarechoes     | assets/bands/lunar-echoes.jpg
+MON | 8.30PM - 12.15AM | The Crimson Meteors     | Indie Rock            | @crimsonmeteors  | assets/bands/crimson-meteors.jpg
 ```
 
 ## 🍽 Menu System

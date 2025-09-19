@@ -14,25 +14,25 @@ The Entertainment section automatically pulls live band schedule data from an Ex
 ### Required Columns
 Create an Excel file (`schedule.xlsx`) with these columns:
 
-| Column A | Column B | Column C | Column D |
-|----------|----------|----------|----------|
-| Day | Time | Band | Genre |
+| Column A | Column B | Column C | Column D | Column E | Column F |
+|----------|----------|----------|----------|----------|----------|
+| Day | Time | Band | Genre | Instagram | Thumbnail |
 
 ### Example Data
 ```
-Day    | Time              | Band                           | Genre
-SUN    | 8.30PM - 10.15PM | Lunar Echoes feat. Solis      | Indie Pop / Dreamwave
-SUN    | 10.30PM - 12.15AM| Nebulae Nights                | Space Jazz
-MON    | 8.30PM - 12.15AM | The Crimson Meteors           | Indie Rock
-TUE    | 8.30PM - 12.15AM | Orbit Oddities feat. Lyra     | Jazz / Pop Fusion
-WED    | 8.30PM - 10.15PM | Red Dust Trio                 | Cosmic Jazz
-WED    | 10.30PM - 12.15AM| Astroflora                    | Psychedelic Soul
-THU    | 8.30PM - 10.15PM | Starlight Caravan feat. Vega  | Folk / Soul
-THU    | 10.30PM - 1.00AM | Zero Gravity Club             | Electronic Indie
-FRI    | 8.00PM - 10.45PM | Martian Funk Syndicate        | Jazz / Soul / Funk
-FRI    | 11.00PM - Till Late| The Mars Tones             | Electronic Pop
-SAT    | 8.00PM - 10.45PM | Solar Flare Quartet feat. Orion| Jazz / Funk / Experimental
-SAT    | 11.00PM - Till Late| Alien Disco Ensemble        | Space Pop / Synth Funk
+Day | Time              | Band                           | Genre                      | Instagram        | Thumbnail
+SUN | 8.30PM - 10.15PM | Lunar Echoes feat. Solis      | Indie Pop / Dreamwave     | @lunarechoes     | assets/bands/lunar-echoes.jpg
+SUN | 10.30PM - 12.15AM| Nebulae Nights                | Space Jazz                 | @nebulaenights   | assets/bands/nebulae-nights.jpg
+MON | 8.30PM - 12.15AM | The Crimson Meteors           | Indie Rock                 | @crimsonmeteors  | assets/bands/crimson-meteors.jpg
+TUE | 8.30PM - 12.15AM | Orbit Oddities feat. Lyra     | Jazz / Pop Fusion          | @orbitoddities   | assets/bands/orbit-oddities.jpg
+WED | 8.30PM - 10.15PM | Red Dust Trio                 | Cosmic Jazz                | @reddusttrio     | assets/bands/red-dust-trio.jpg
+WED | 10.30PM - 12.15AM| Astroflora                    | Psychedelic Soul           | @astroflora      | assets/bands/astroflora.jpg
+THU | 8.30PM - 10.15PM | Starlight Caravan feat. Vega  | Folk / Soul                | @starlightcaravan| assets/bands/starlight-caravan.jpg
+THU | 10.30PM - 1.00AM | Zero Gravity Club             | Electronic Indie           | @zerogravityclub | assets/bands/zero-gravity-club.jpg
+FRI | 8.00PM - 10.45PM | Martian Funk Syndicate        | Jazz / Soul / Funk         | @martianfunksyn  | assets/bands/martian-funk-syndicate.jpg
+FRI | 11.00PM - Till Late| The Mars Tones             | Electronic Pop             | @themarstones    | assets/bands/mars-tones.jpg
+SAT | 8.00PM - 10.45PM | Solar Flare Quartet feat. Orion| Jazz / Funk / Experimental| @solarflarequar | assets/bands/solar-flare-quartet.jpg
+SAT | 11.00PM - Till Late| Alien Disco Ensemble        | Space Pop / Synth Funk    | @aliendiscoens   | assets/bands/alien-disco-ensemble.jpg
 ```
 
 ## Implementation Options
@@ -63,7 +63,9 @@ app.get('/api/schedule', (req, res) => {
             schedule[row.Day].timeSlots.push({
                 time: row.Time,
                 band: row.Band,
-                genre: row.Genre
+                genre: row.Genre,
+                instagram: row.Instagram || '',
+                thumbnail: row.Thumbnail || ''
             });
         });
 
@@ -103,7 +105,9 @@ try {
         $schedule[$day]['timeSlots'][] = [
             'time' => $row[1],
             'band' => $row[2],
-            'genre' => $row[3]
+            'genre' => $row[3],
+            'instagram' => $row[4] ?? '',
+            'thumbnail' => $row[5] ?? ''
         ];
     }
 
@@ -144,12 +148,16 @@ Create `assets/schedule.json`:
             {
                 "time": "8.30PM - 10.15PM",
                 "band": "Lunar Echoes feat. Solis",
-                "genre": "Indie Pop / Dreamwave"
+                "genre": "Indie Pop / Dreamwave",
+                "instagram": "@lunarechoes",
+                "thumbnail": "assets/bands/lunar-echoes.jpg"
             },
             {
                 "time": "10.30PM - 12.15AM",
                 "band": "Nebulae Nights",
-                "genre": "Space Jazz"
+                "genre": "Space Jazz",
+                "instagram": "@nebulaenights",
+                "thumbnail": "assets/bands/nebulae-nights.jpg"
             }
         ]
     }
@@ -176,6 +184,9 @@ Create `assets/schedule.json`:
 - **Typography**: Matches Mars Bar aesthetic
 - **Color Scheme**: Consistent with site design
 - **Layout**: Mirrors the PDF design exactly
+- **Band Thumbnails**: 80x80px images with hover effects
+- **Instagram Integration**: Clickable handles linking to band profiles
+- **Professional Layout**: Image + info layout for enhanced visual appeal
 
 ## Testing
 
