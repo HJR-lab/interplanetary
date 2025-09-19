@@ -979,6 +979,7 @@ section {
 .footer-info p {
     margin-bottom: 0.5rem;
     opacity: 0.8;
+    font-size: 0.8rem;
 }
 
 /* Responsive Design */
