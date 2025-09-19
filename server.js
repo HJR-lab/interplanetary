@@ -5,7 +5,14 @@ const express = require('express');
 const XLSX = require('xlsx');
 const cron = require('node-cron');
 const fs = require('fs');
+const cors = require('cors');
 const app = express();
+
+// Enable CORS for all routes
+app.use(cors());
+
+// Serve static files
+app.use(express.static('.'));
 
 // Store processed schedule data
 let currentSchedule = null;
@@ -127,6 +134,49 @@ app.get('/api/schedule/status', (req, res) => {
         lastUpdate: lastUpdateTime,
         scheduleCount: currentSchedule ? currentSchedule.length : 0
     });
+});
+
+// Instagram feed proxy endpoint
+app.get('/api/instagram-feed', async (req, res) => {
+    try {
+        // For now, return sample data
+        // In production, you would fetch from Instagram API here
+        const samplePosts = [
+            {
+                id: '1',
+                media_url: 'assets/gallery/post1.svg',
+                permalink: 'https://instagram.com/themarsbarsg',
+                caption: 'Latest from The Mars Bar #themarsbarsg',
+                media_type: 'IMAGE'
+            },
+            {
+                id: '2',
+                media_url: 'assets/gallery/post2.svg',
+                permalink: 'https://instagram.com/themarsbarsg',
+                caption: 'Great evening at The Mars Bar',
+                media_type: 'IMAGE'
+            },
+            {
+                id: '3',
+                media_url: 'assets/gallery/post3.svg',
+                permalink: 'https://instagram.com/themarsbarsg',
+                caption: 'Live music tonight #marsbar',
+                media_type: 'IMAGE'
+            }
+        ];
+
+        res.json({
+            success: true,
+            images: samplePosts,
+            account: '@themarsbarsg'
+        });
+    } catch (error) {
+        console.error('Instagram feed error:', error);
+        res.status(500).json({
+            success: false,
+            error: 'Failed to fetch Instagram feed'
+        });
+    }
 });
 
 const PORT = process.env.PORT || 3000;

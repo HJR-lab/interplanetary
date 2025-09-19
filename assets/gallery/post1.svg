@@ -1,0 +1,6 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100%" height="100%" fill="#82231E"/>
+  <text x="50%" y="45%" font-family="Arial" font-size="24" fill="#E1D2AA" text-anchor="middle" dy=".3em">Most Recent</text>
+  <text x="50%" y="55%" font-family="Arial" font-size="18" fill="#E1D2AA" text-anchor="middle" dy=".3em">Instagram Post #1</text>
+  <text x="50%" y="70%" font-family="Arial" font-size="14" fill="#E1D2AA" text-anchor="middle" dy=".3em">@themarsbarsg</text>
+</svg>

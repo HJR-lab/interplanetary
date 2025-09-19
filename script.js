@@ -598,3 +598,53 @@ function showScheduleFallback() {
     scheduleGrid.style.display = 'none';
     scheduleFallback.style.display = 'grid';
 }
+
+// Instagram display functions
+function displayInstagramImages(images) {
+    const instagramFeed = document.getElementById('instagram-feed');
+    const loadingMessage = document.querySelector('.loading-message');
+
+    if (loadingMessage) {
+        loadingMessage.style.display = 'none';
+    }
+
+    // Clear the feed
+    instagramFeed.innerHTML = '';
+
+    // Add only the first 3 images
+    const recentImages = images.slice(0, 3);
+
+    recentImages.forEach(image => {
+        const imageElement = createInstagramImage(image);
+        instagramFeed.appendChild(imageElement);
+    });
+}
+
+function createInstagramImage(image) {
+    const imageElement = document.createElement('div');
+    imageElement.className = 'instagram-item';
+
+    imageElement.innerHTML = `
+        <a href="${image.permalink}" target="_blank" rel="noopener" class="instagram-link">
+            <img src="${image.media_url}" alt="${image.caption || 'Instagram post'}" class="instagram-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjODIyMzFFIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iI0UxRDJBQSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlPC90ZXh0Pjwvc3ZnPg=='">
+            <div class="instagram-overlay">
+                <span class="instagram-icon">📷</span>
+            </div>
+        </a>
+    `;
+
+    return imageElement;
+}
+
+function showInstagramFallback() {
+    const instagramFeed = document.getElementById('instagram-feed');
+    const galleryFallback = document.getElementById('gallery-fallback');
+    const loadingMessage = document.querySelector('.loading-message');
+
+    if (loadingMessage) {
+        loadingMessage.style.display = 'none';
+    }
+
+    instagramFeed.style.display = 'none';
+    galleryFallback.style.display = 'block';
+}
