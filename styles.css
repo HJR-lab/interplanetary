@@ -1110,20 +1110,22 @@ section {
     }
 
     .time-slot {
-        flex-direction: column;
-        gap: 0.8rem;
+        flex-direction: row;
+        gap: 1rem;
         padding: 0.8rem;
+        align-items: flex-start;
     }
 
     .band-thumbnail {
         width: 60px;
         height: 60px;
-        align-self: center;
+        flex-shrink: 0;
     }
 
     .slot-info {
-        text-align: center;
+        text-align: left;
         gap: 0.2rem;
+        flex: 1;
     }
 
     .instagram-feed {
