@@ -76,3 +76,4 @@ server.log
 # Excel files backup
 *-backup.xlsx
 schedule-backup-*.json
+.vercel

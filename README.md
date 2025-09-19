@@ -187,4 +187,4 @@ For advanced features, deploy with:
 
 ---
 
-**Built with modern web technologies for The Mars Bar - Where sophistication meets exceptional taste.**
+**Built with modern web technologies for The Mars Bar - Interplanetary LIVE music. All aliens welcome.**
