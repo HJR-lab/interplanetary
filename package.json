@@ -1,0 +1,35 @@
+{
+  "name": "mars-bar-website",
+  "version": "1.0.0",
+  "description": "The Mars Bar restaurant website with live band schedule integration",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "create-excel": "node create-excel.js",
+    "test-schedule": "node test-schedule.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "xlsx": "^0.18.5",
+    "node-cron": "^3.0.3",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "restaurant",
+    "mars-bar",
+    "live-music",
+    "schedule",
+    "excel",
+    "automation"
+  ],
+  "author": "The Mars Bar",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HJR-lab/interplanetary.git"
+  }
+}

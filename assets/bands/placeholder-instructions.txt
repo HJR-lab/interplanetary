@@ -1,0 +1,30 @@
+Band Thumbnail Images
+====================
+
+This folder should contain 80x80px (or larger) thumbnail images for each band.
+
+Required Images (based on current schedule):
+- lunar-echoes.jpg
+- nebulae-nights.jpg
+- crimson-meteors.jpg
+- orbit-oddities.jpg
+- red-dust-trio.jpg
+- astroflora.jpg
+- starlight-caravan.jpg
+- zero-gravity-club.jpg
+- martian-funk-syndicate.jpg
+- mars-tones.jpg
+- solar-flare-quartet.jpg
+- alien-disco-ensemble.jpg
+
+Image Requirements:
+- Format: JPG, PNG, or WebP
+- Size: Minimum 80x80px (will be displayed at 80x80px)
+- Aspect Ratio: Square (1:1) recommended
+- File Size: Keep under 100KB for fast loading
+
+Tips:
+- Use band logos, album covers, or promotional photos
+- Ensure images are high quality when scaled to 80x80px
+- If no image available, the layout will gracefully hide the thumbnail
+- Update the Excel file if you use different image names
