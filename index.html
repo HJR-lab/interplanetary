@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mars Bar - Singapore</title>
+    <meta name="description" content="Experience exceptional cocktails and dining at The Mars Bar, Singapore's premier destination for sophisticated nightlife.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="assets/TMB_Logo_long.png" alt="The Mars Bar" class="logo-img">
+                </div>
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#story" class="nav-link">Story</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#show" class="nav-link">Show</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#menu" class="nav-link">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#gallery" class="nav-link">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#reservation" class="nav-link reservation-btn">Reservation</a>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome to The Mars Bar</h1>
+                <p class="hero-subtitle">Where sophistication meets exceptional taste</p>
+                <div class="hero-buttons">
+                    <a href="#reservation" class="btn btn-primary">Make a Reservation</a>
+                    <a href="#menu" class="btn btn-secondary">View Menu</a>
+                </div>
+            </div>
+            <div class="hero-overlay"></div>
+        </section>
+
+        <!-- Story Section -->
+        <section id="story" class="story">
+            <div class="container">
+                <div class="story-content">
+                    <div class="story-text">
+                        <h2 class="section-title">Our Story</h2>
+                        <p class="story-description">
+                            Nestled in the heart of Singapore, The Mars Bar offers an unparalleled experience
+                            of sophisticated dining and expertly crafted cocktails. Our passion for excellence
+                            is reflected in every detail, from our carefully curated menu to our elegant atmosphere.
+                        </p>
+                        <p class="story-description">
+                            Step into our world where tradition meets innovation, and every visit becomes
+                            an unforgettable journey of taste and refinement.
+                        </p>
+                    </div>
+                    <div class="story-image">
+                        <div class="image-placeholder"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Show Section -->
+        <section id="show" class="show">
+            <div class="container">
+                <h2 class="section-title">Live Bands</h2>
+                <div class="schedule-container">
+                    <div class="schedule-header">
+                        <p class="schedule-note">Live music schedule updated weekly</p>
+                    </div>
+                    <div class="schedule-grid" id="schedule-grid">
+                        <!-- Schedule will be loaded here from Excel -->
+                        <div class="loading-schedule">Loading schedule...</div>
+                    </div>
+                    <div class="schedule-fallback" id="schedule-fallback" style="display: none;">
+                        <div class="day-schedule">
+                            <div class="day-header">SUN</div>
+                            <div class="time-slot">
+                                <span class="time">8.30PM - 10.15PM</span>
+                                <span class="band">Lunar Echoes feat. Solis</span>
+                                <span class="genre">Indie Pop / Dreamwave</span>
+                            </div>
+                            <div class="time-slot">
+                                <span class="time">10.30PM - 12.15AM</span>
+                                <span class="band">Nebulae Nights</span>
+                                <span class="genre">Space Jazz</span>
+                            </div>
+                        </div>
+                        <div class="day-schedule">
+                            <div class="day-header">MON</div>
+                            <div class="time-slot">
+                                <span class="time">8.30PM - 12.15AM</span>
+                                <span class="band">The Crimson Meteors</span>
+                                <span class="genre">Indie Rock</span>
+                            </div>
+                        </div>
+                        <div class="day-schedule">
+                            <div class="day-header">TUE</div>
+                            <div class="time-slot">
+                                <span class="time">8.30PM - 12.15AM</span>
+                                <span class="band">Orbit Oddities feat. Lyra</span>
+                                <span class="genre">Jazz / Pop Fusion</span>
+                            </div>
+                        </div>
+                        <div class="day-schedule">
+                            <div class="day-header">WED</div>
+                            <div class="time-slot">
+                                <span class="time">8.30PM - 10.15PM</span>
+                                <span class="band">Red Dust Trio</span>
+                                <span class="genre">Cosmic Jazz</span>
+                            </div>
+                            <div class="time-slot">
+                                <span class="time">10.30PM - 12.15AM</span>
+                                <span class="band">Astroflora</span>
+                                <span class="genre">Psychedelic Soul</span>
+                            </div>
+                        </div>
+                        <div class="day-schedule">
+                            <div class="day-header">THU</div>
+                            <div class="time-slot">
+                                <span class="time">8.30PM - 10.15PM</span>
+                                <span class="band">Starlight Caravan feat. Vega</span>
+                                <span class="genre">Folk / Soul</span>
+                            </div>
+                            <div class="time-slot">
+                                <span class="time">10.30PM - 1.00AM</span>
+                                <span class="band">Zero Gravity Club</span>
+                                <span class="genre">Electronic Indie</span>
+                            </div>
+                        </div>
+                        <div class="day-schedule">
+                            <div class="day-header">FRI</div>
+                            <div class="time-slot">
+                                <span class="time">8.00PM - 10.45PM</span>
+                                <span class="band">Martian Funk Syndicate</span>
+                                <span class="genre">Jazz / Soul / Funk</span>
+                            </div>
+                            <div class="time-slot">
+                                <span class="time">11.00PM - Till Late</span>
+                                <span class="band">The Mars Tones</span>
+                                <span class="genre">Electronic Pop</span>
+                            </div>
+                        </div>
+                        <div class="day-schedule">
+                            <div class="day-header">SAT</div>
+                            <div class="time-slot">
+                                <span class="time">8.00PM - 10.45PM</span>
+                                <span class="band">Solar Flare Quartet feat. Orion</span>
+                                <span class="genre">Jazz / Funk / Experimental</span>
+                            </div>
+                            <div class="time-slot">
+                                <span class="time">11.00PM - Till Late</span>
+                                <span class="band">Alien Disco Ensemble</span>
+                                <span class="genre">Space Pop / Synth Funk</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="menu">
+            <div class="container">
+                <h2 class="section-title">Menu</h2>
+                <div class="menu-display">
+                    <div class="menu-image-container">
+                        <div class="menu-pdf-display">
+                            <iframe src="assets/menu.pdf" class="menu-pdf-iframe" title="The Mars Bar Menu"></iframe>
+                            <div class="menu-pdf-overlay" onclick="openMenuPDF()">
+                                <p>Click to open full menu</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-download">
+                        <a href="assets/menu.pdf" target="_blank" class="btn btn-primary menu-pdf-btn" download>
+                            <span>📄</span> Download Menu (PDF)
+                        </a>
+                        <p class="menu-note">Click the menu image above to view or download below to save</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery">
+            <div class="container">
+                <h2 class="section-title">Gallery</h2>
+                <div class="instagram-feed" id="instagram-feed">
+                    <!-- Instagram posts will be loaded here -->
+                    <div class="loading-message">Loading Instagram feed...</div>
+                </div>
+                <div class="gallery-fallback" id="gallery-fallback" style="display: none;">
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <div class="image-placeholder">Latest Posts</div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="image-placeholder">@themarsbarsg</div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="image-placeholder">Follow Us</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="instagram-cta">
+                    <a href="https://instagram.com/themarsbarsg" target="_blank" rel="noopener" class="btn btn-primary">Follow Us on Instagram</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reservation Section -->
+        <section id="reservation" class="reservation">
+            <div class="container">
+                <h2 class="section-title">Reservations</h2>
+                <div class="reservation-content">
+                    <div class="reservation-info">
+                        <p>For reservations, please call us or use our online booking system.</p>
+                        <p class="phone">Phone: <a href="tel:+6596181013">+65 9618 1013</a></p>
+                    </div>
+                    <div class="reservation-form">
+                        <form class="booking-form" action="https://formsubmit.co/reservations@themarsbar.sg" method="POST">
+                            <input type="hidden" name="_subject" value="New Reservation Request - The Mars Bar">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_next" value="https://themarsbar.sg/thank-you">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="date">Date</label>
+                                    <input type="date" id="date" name="date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="time">Time</label>
+                                    <select id="time" name="time" required>
+                                        <option value="">Select time</option>
+                                        <option value="17:00">5:00 PM</option>
+                                        <option value="17:30">5:30 PM</option>
+                                        <option value="18:00">6:00 PM</option>
+                                        <option value="18:30">6:30 PM</option>
+                                        <option value="19:00">7:00 PM</option>
+                                        <option value="19:30">7:30 PM</option>
+                                        <option value="20:00">8:00 PM</option>
+                                        <option value="20:30">8:30 PM</option>
+                                        <option value="21:00">9:00 PM</option>
+                                        <option value="21:30">9:30 PM</option>
+                                        <option value="22:00">10:00 PM</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="guests">Guests</label>
+                                    <select id="guests" name="guests" required>
+                                        <option value="">Number of guests</option>
+                                        <option value="1">1 Guest</option>
+                                        <option value="2">2 Guests</option>
+                                        <option value="3">3 Guests</option>
+                                        <option value="4">4 Guests</option>
+                                        <option value="5">5 Guests</option>
+                                        <option value="6">6 Guests</option>
+                                        <option value="7">7 Guests</option>
+                                        <option value="8">8 Guests</option>
+                                        <option value="9">9 Guests</option>
+                                        <option value="10">10+ Guests</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="company">Company (Optional)</label>
+                                    <input type="text" id="company" name="company" placeholder="Company name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="+65 XXXX XXXX">
+                            </div>
+                            <div class="form-group">
+                                <label for="notes">Special Requests</label>
+                                <textarea id="notes" name="notes" rows="3" placeholder="Dietary restrictions, celebrations, seating preferences..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary full-width">Book Now</button>
+                            <p class="form-note">You will receive a confirmation email shortly. For immediate assistance, call us at <a href="tel:+6596181013">+65 9618 1013</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h3>Address</h3>
+                            <p>200 Middle Road<br>Singapore 188980</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Phone</h3>
+                            <p><a href="tel:+6596181013">+65 9618 1013</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Hours</h3>
+                            <p>Monday - Thursday: 5:00 PM - 12:00 AM<br>
+                               Friday - Saturday: 5:00 PM - 2:00 AM<br>
+                               Sunday: 5:00 PM - 11:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form class="inquiry-form">
+                            <div class="form-group">
+                                <label for="contact-name">Name</label>
+                                <input type="text" id="contact-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email</label>
+                                <input type="email" id="contact-email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary full-width">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/TMB_Logo_long.png" alt="The Mars Bar" class="footer-logo-img">
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2024 The Mars Bar. All rights reserved. | 200 Middle Road, Singapore 188980</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

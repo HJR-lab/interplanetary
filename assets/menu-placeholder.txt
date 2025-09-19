@@ -1,0 +1,15 @@
+This is a placeholder for menu.pdf
+
+To complete the setup:
+1. Create a PDF file called "menu.pdf" with The Mars Bar's complete menu
+2. Save it in the assets/ folder
+3. The website will automatically link to it via the "Download Full Menu (PDF)" button
+
+The menu PDF should include:
+- Full cocktail menu with descriptions and prices
+- Food menu (appetizers, small plates, etc.)
+- Wine list
+- Special seasonal offerings
+- Contact information and hours
+
+File should be named exactly: menu.pdf
