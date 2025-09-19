@@ -1,0 +1,211 @@
+================================================================================
+                    INSTAGRAM INTEGRATION GUIDE FOR THE MARS BAR
+================================================================================
+
+Your website now has a working Instagram gallery system! Currently it shows
+placeholder images, but you can easily add real Instagram content using one
+of the methods below.
+
+================================================================================
+OPTION 1: MANUAL UPDATES (EASIEST - RECOMMENDED FOR NOW)
+================================================================================
+
+This is the simplest way to show your latest Instagram posts without dealing
+with API complications.
+
+STEP 1: Download Your Latest Instagram Photos
+1. Go to @themarsbarsg Instagram account
+2. Right-click and save the 3 most recent photos
+3. Save them to your computer
+
+STEP 2: Prepare the Images
+1. Rename the images to:
+   - Most recent post → post1.jpg (or .png)
+   - Second recent   → post2.jpg (or .png)
+   - Third recent    → post3.jpg (or .png)
+
+2. Image requirements:
+   - Format: JPG, PNG, or WebP
+   - Size: Minimum 400x400px (square format works best)
+   - File size: Keep under 500KB each for fast loading
+
+STEP 3: Upload to Website
+1. Upload the 3 images to: assets/gallery/ folder
+2. Replace the existing post1.svg, post2.svg, post3.svg files
+3. The website will automatically display your new images!
+
+STEP 4: Update Weekly (Recommended)
+- Repeat this process weekly to keep gallery fresh
+- Always use the same filenames (post1, post2, post3)
+- Visitors will see your latest Instagram content
+
+BENEFITS:
+✓ No technical setup required
+✓ Full control over which posts appear
+✓ No API limits or complications
+✓ Works immediately
+
+================================================================================
+OPTION 2: FULL INSTAGRAM API INTEGRATION (ADVANCED)
+================================================================================
+
+This automatically pulls your 3 latest Instagram posts, but requires technical
+setup and Facebook Developer approval.
+
+STEP 1: Create Facebook Developer Account
+1. Go to https://developers.facebook.com
+2. Log in with Facebook account (create one if needed)
+3. Click "Create App" → Choose "Consumer" type
+4. Fill in app details:
+   - App Name: "The Mars Bar Website"
+   - Contact Email: your email
+   - Purpose: "Display Instagram posts on restaurant website"
+
+STEP 2: Add Instagram Basic Display Product
+1. In your app dashboard, click "Add Product"
+2. Find "Instagram Basic Display" → Click "Set Up"
+3. Go to Instagram Basic Display → Basic Display
+
+STEP 3: Configure Instagram App
+1. Click "Create New App" in Instagram Basic Display
+2. Fill in details:
+   - Display Name: "The Mars Bar Website"
+   - Valid OAuth Redirect URIs: https://your-website-url.com
+   - Deauthorize Callback URL: https://your-website-url.com
+   - Data Deletion Request URL: https://your-website-url.com
+
+STEP 4: Add Instagram Test User
+1. In Basic Display settings, scroll to "User Token Generator"
+2. Click "Add or Remove Instagram Testers"
+3. Add the Instagram account: themarsbarsg
+4. The @themarsbarsg account owner must:
+   - Check email for invitation
+   - Accept the tester invitation
+
+STEP 5: Generate Access Token
+1. Go back to "User Token Generator"
+2. Click "Generate Token" for themarsbarsg account
+3. Copy the long access token (starts with "IGQ...")
+4. ⚠️ IMPORTANT: Keep this token secure and private!
+
+STEP 6: Update Server Code
+1. Open file: server.js
+2. Find this section around line 144:
+
+   // For now, return sample data
+   // In production, you would fetch from Instagram API here
+
+3. Replace the sample data code with:
+
+   const ACCESS_TOKEN = 'YOUR_ACTUAL_TOKEN_HERE'; // Replace with real token
+
+   try {
+       const response = await fetch(
+           `https://graph.instagram.com/me/media?fields=id,caption,media_type,media_url,thumbnail_url,permalink&limit=3&access_token=${ACCESS_TOKEN}`
+       );
+
+       if (!response.ok) {
+           throw new Error('Instagram API request failed');
+       }
+
+       const data = await response.json();
+
+       if (data.data && data.data.length > 0) {
+           res.json({
+               success: true,
+               images: data.data,
+               account: '@themarsbarsg'
+           });
+           return;
+       }
+   } catch (error) {
+       console.error('Instagram API error:', error);
+       // Fall back to sample data if API fails
+   }
+
+STEP 7: Handle Token Expiration
+Instagram tokens expire after 60 days. You'll need to:
+1. Set up automatic token refresh (advanced)
+2. OR manually regenerate tokens every 60 days
+3. Monitor for API errors indicating expired tokens
+
+IMPORTANT SECURITY NOTES:
+⚠️ Never expose access tokens in client-side code
+⚠️ Keep tokens in environment variables (.env file)
+⚠️ Monitor API rate limits (200 requests per hour)
+⚠️ Set up error handling for when API is down
+
+BENEFITS:
+✓ Automatic updates - no manual work
+✓ Always shows latest 3 posts
+✓ Professional automation
+
+DRAWBACKS:
+✗ Complex setup process
+✗ Requires Facebook Developer approval
+✗ Tokens expire every 60 days
+✗ Subject to Instagram API changes
+✗ Rate limits apply
+
+================================================================================
+OPTION 3: HYBRID APPROACH (RECOMMENDED)
+================================================================================
+
+Start with Manual Updates (Option 1) for immediate results, then upgrade to
+API integration (Option 2) later when you have time for technical setup.
+
+This gives you:
+✓ Immediate working Instagram gallery
+✓ Time to set up API integration properly
+✓ Fallback if API has issues
+
+================================================================================
+CURRENT STATUS
+================================================================================
+
+Your website currently shows:
+- 3 placeholder Instagram-style images in Mars Bar colors
+- Grid layout with hover effects and Instagram branding
+- Links to @themarsbarsg Instagram account
+- Mobile-responsive design
+
+Location: Gallery section of your website
+Live URL: https://website-eiv9whg71-hjr-labs-projects.vercel.app
+
+TO UPDATE: Simply replace these 3 files in assets/gallery/:
+- post1.svg → post1.jpg (your latest Instagram photo)
+- post2.svg → post2.jpg (your second latest photo)
+- post3.svg → post3.jpg (your third latest photo)
+
+================================================================================
+SUPPORT & TROUBLESHOOTING
+================================================================================
+
+COMMON ISSUES:
+
+Problem: Images not showing
+Solution: Check file names match exactly (post1, post2, post3) and files
+         are in assets/gallery/ folder
+
+Problem: Instagram API not working
+Solution: Check access token is valid and hasn't expired (60-day limit)
+
+Problem: CORS errors in browser
+Solution: The server proxy handles this automatically
+
+Problem: Images look stretched
+Solution: Use square images (1:1 aspect ratio) for best results
+
+TESTING:
+- Local: http://localhost:3000 (when server running)
+- Live: https://website-eiv9whg71-hjr-labs-projects.vercel.app
+
+================================================================================
+
+For immediate results, start with Option 1 (Manual Updates).
+For questions, refer to the Instagram API documentation at:
+https://developers.facebook.com/docs/instagram-basic-display-api/
+
+Your Instagram gallery is ready to showcase The Mars Bar's latest content!
+
+================================================================================
