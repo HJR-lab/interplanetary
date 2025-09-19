@@ -1102,6 +1102,36 @@ section {
         grid-template-columns: 1fr;
     }
 
+    .schedule-container {
+        max-width: 95%;
+        width: 95%;
+        padding: 1rem;
+        margin: 0 auto;
+    }
+
+    .time-slot {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 0.8rem;
+    }
+
+    .band-thumbnail {
+        width: 60px;
+        height: 60px;
+        align-self: center;
+    }
+
+    .slot-info {
+        text-align: center;
+        gap: 0.2rem;
+    }
+
+    .instagram-feed {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+
     .hero-buttons {
         flex-direction: column;
         align-items: center;
