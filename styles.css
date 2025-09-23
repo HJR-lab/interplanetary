@@ -499,7 +499,7 @@ section {
 }
 
 .instagram a::before {
-    content: "📷";
+    content: "IG:";
     font-size: 0.8rem;
 }
 
@@ -1162,8 +1162,8 @@ section {
     }
 
     .band-thumbnail {
-        width: 60px;
-        height: 60px;
+        width: 100px;
+        height: 100px;
         flex-shrink: 0;
     }
 

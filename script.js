@@ -628,7 +628,7 @@ function createInstagramImage(image) {
         <a href="${image.permalink}" target="_blank" rel="noopener" class="instagram-link">
             <img src="${image.media_url}" alt="${image.caption || 'Instagram post'}" class="instagram-img" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjODIyMzFFIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZmlsbD0iI0UxRDJBQSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlPC90ZXh0Pjwvc3ZnPg=='">
             <div class="instagram-overlay">
-                <span class="instagram-icon">📷</span>
+                <span class="instagram-icon">IG:</span>
             </div>
         </a>
     `;
