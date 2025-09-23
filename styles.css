@@ -479,7 +479,7 @@ section {
     font-size: 1.1rem;
     color: var(--sand-beige);
     font-weight: 500;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.1rem;
     font-family: 'Hernandez Bros', 'Cormorant Garamond', serif;
 }
 
@@ -497,7 +497,7 @@ section {
     border-radius: 8px;
     overflow: hidden;
     background: rgba(225, 210, 170, 0.1);
-    border: 2px solid rgba(225, 210, 170, 0.3);
+    border: 1px solid rgba(225, 210, 170, 0.3);
 }
 
 .band-thumbnail img {
@@ -515,7 +515,7 @@ section {
     display: flex;
     flex-direction: column;
     flex: 1;
-    gap: 0.3rem;
+    gap: 0.05rem;
 }
 
 .instagram {
@@ -1209,8 +1209,16 @@ section {
 
     .slot-info {
         text-align: left;
-        gap: 0.2rem;
+        gap: 0.05rem;
         flex: 1;
+    }
+
+    .band {
+        line-height: 1.1;
+    }
+
+    .genre {
+        line-height: 1.1;
     }
 
     .instagram-feed {
