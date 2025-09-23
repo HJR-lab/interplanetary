@@ -65,7 +65,7 @@ body {
 
 /* Flying saucer cursor for all clickable elements */
 a, button, input[type="submit"], [role="button"] {
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><text y="48" font-size="48">🛸</text></svg>'), pointer;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text x="16" y="24" font-size="24" text-anchor="middle">🛸</text></svg>') 16 16, pointer;
 }
 
 /* Planet cursor for reservation elements */
@@ -82,7 +82,21 @@ a[href="#reservation"],
 .booking-form select,
 .booking-form textarea,
 .booking-form button {
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><text y="48" font-size="48">🪐</text></svg>'), pointer !important;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text x="16" y="24" font-size="24" text-anchor="middle">🪐</text></svg>') 16 16, pointer !important;
+    transition: all 0.3s ease;
+}
+
+/* Sun cursor for menu and gallery elements */
+a[href="#menu"],
+.btn-secondary,
+.gallery img,
+.gallery a,
+.instagram-link,
+.instagram-img,
+#instagram-feed img,
+#gallery-fallback img,
+.gallery-item {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text x="16" y="24" font-size="24" text-anchor="middle">☀️</text></svg>') 16 16, pointer !important;
     transition: all 0.3s ease;
 }
 
@@ -96,7 +110,7 @@ body {
     color: var(--sand-beige);
     background-color: #82231E;
     overflow-x: hidden;
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><text y="48" font-size="48">🛸</text></svg>'), auto;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text x="16" y="24" font-size="24" text-anchor="middle">🛸</text></svg>') 16 16, auto;
 }
 
 /* Color Variables - Inspired by Mars Bar Logo */
@@ -440,6 +454,13 @@ section {
     padding: 1rem;
     background: rgba(0, 0, 0, 0.3);
     border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.time-slot:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(225, 210, 170, 0.3), 0 0 20px rgba(225, 210, 170, 0.1);
+    background: rgba(225, 210, 170, 0.1);
 }
 
 .time-slot:last-child {
