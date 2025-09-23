@@ -68,6 +68,24 @@ a, button, input[type="submit"], [role="button"] {
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><text y="48" font-size="48">🛸</text></svg>'), pointer;
 }
 
+/* Planet cursor for reservation elements */
+.reservation-btn,
+.reservation .btn,
+.reservation a,
+.reservation button,
+.reservation input,
+.reservation select,
+.reservation textarea,
+a[href="#reservation"],
+.btn-primary,
+.booking-form input,
+.booking-form select,
+.booking-form textarea,
+.booking-form button {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><text y="48" font-size="48">🪐</text></svg>'), pointer !important;
+    transition: all 0.3s ease;
+}
+
 html {
     scroll-behavior: smooth;
 }
