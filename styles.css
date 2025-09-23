@@ -1,3 +1,11 @@
+/* Custom Font */
+@font-face {
+    font-family: 'Hernandez Bros';
+    src: url('assets/Hernandez-Bros-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-display: swap;
+}
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -5,12 +13,60 @@
     box-sizing: border-box;
 }
 
+/* Smooth Transitions */
+* {
+    transition: opacity 0.4s linear, transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Fade-in animation for page load */
+body {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Scroll-based animations */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Enhanced hover effects */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.nav-links a {
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    transform: translateY(-1px);
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Manrope', sans-serif;
     line-height: 1.6;
     color: var(--sand-beige);
     background-color: #82231E;
@@ -33,7 +89,7 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Hernandez Bros', 'Cormorant Garamond', serif;
     font-weight: 500;
     line-height: 1.2;
     color: var(--sand-beige);
@@ -260,7 +316,7 @@ section {
 }
 
 .story-description {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Hernandez Bros', 'Cormorant Garamond', serif;
     font-size: 1.3rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
@@ -345,7 +401,7 @@ section {
 }
 
 .day-header {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Hernandez Bros', 'Cormorant Garamond', serif;
     font-size: 1.8rem;
     font-weight: 600;
     color: var(--sand-beige);
@@ -384,7 +440,7 @@ section {
     color: var(--sand-beige);
     font-weight: 500;
     margin-bottom: 0.3rem;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Hernandez Bros', 'Cormorant Garamond', serif;
 }
 
 .genre {

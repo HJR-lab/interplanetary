@@ -8,19 +8,18 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <nav class="nav">
             <div class="nav-container">
                 <div class="logo">
-                    <img src="assets/TMB_Logo_long.png" alt="The Mars Bar" class="logo-img">
+                    <a href="#home">
+                        <img src="assets/TMB_Logo_long.png" alt="The Mars Bar" class="logo-img">
+                    </a>
                 </div>
                 <ul class="nav-menu" id="nav-menu">
-                    <li class="nav-item">
-                        <a href="#home" class="nav-link">Home</a>
-                    </li>
                     <li class="nav-item">
                         <a href="#story" class="nav-link">Story</a>
                     </li>
@@ -51,7 +50,7 @@
         <section id="home" class="hero">
             <div class="hero-content">
                 <h1 class="hero-title">Welcome to The Mars Bar</h1>
-                <p class="hero-subtitle">INTERPLANETARY LIVE MUSIC. ALL ALIENS WELCOME</p>
+                <p class="hero-subtitle">INTERPLANETARY LIVE MUSIC • ALL ALIENS WELCOME</p>
                 <div class="hero-buttons">
                     <a href="#reservation" class="btn btn-primary">Make a Reservation</a>
                     <a href="#menu" class="btn btn-secondary">View Menu</a>
@@ -61,7 +60,7 @@
         </section>
 
         <!-- Story Section -->
-        <section id="story" class="story">
+        <section id="story" class="story fade-in-section">
             <div class="container">
                 <div class="story-content">
                     <div class="story-text">
@@ -81,7 +80,7 @@
         </section>
 
         <!-- Show Section -->
-        <section id="show" class="show">
+        <section id="show" class="show fade-in-section">
             <div class="container">
                 <h2 class="section-title">Live Bands</h2>
                 <div class="schedule-container">
@@ -94,7 +93,7 @@
                     </div>
                     <div class="schedule-fallback" id="schedule-fallback" style="display: none;">
                         <div class="day-schedule">
-                            <div class="day-header">SUN</div>
+                            <div class="day-header">SUNDAY</div>
                             <div class="time-slot">
                                 <div class="band-thumbnail">
                                     <img src="assets/bands/lunar-echoes.jpg" alt="Lunar Echoes feat. Solis" onerror="this.style.display='none'">
@@ -119,7 +118,7 @@
                             </div>
                         </div>
                         <div class="day-schedule">
-                            <div class="day-header">MON</div>
+                            <div class="day-header">MONDAY</div>
                             <div class="time-slot">
                                 <div class="band-thumbnail">
                                     <img src="assets/bands/crimson-meteors.jpg" alt="The Crimson Meteors" onerror="this.style.display='none'">
@@ -133,7 +132,7 @@
                             </div>
                         </div>
                         <div class="day-schedule">
-                            <div class="day-header">TUE</div>
+                            <div class="day-header">TUESDAY</div>
                             <div class="time-slot">
                                 <div class="band-thumbnail">
                                     <img src="assets/bands/orbit-oddities.jpg" alt="Orbit Oddities feat. Lyra" onerror="this.style.display='none'">
@@ -147,7 +146,7 @@
                             </div>
                         </div>
                         <div class="day-schedule">
-                            <div class="day-header">WED</div>
+                            <div class="day-header">WEDNESDAY</div>
                             <div class="time-slot">
                                 <div class="band-thumbnail">
                                     <img src="assets/bands/red-dust-trio.jpg" alt="Red Dust Trio" onerror="this.style.display='none'">
@@ -172,7 +171,7 @@
                             </div>
                         </div>
                         <div class="day-schedule">
-                            <div class="day-header">THU</div>
+                            <div class="day-header">THURSDAY</div>
                             <div class="time-slot">
                                 <div class="band-thumbnail">
                                     <img src="assets/bands/starlight-caravan.jpg" alt="Starlight Caravan feat. Vega" onerror="this.style.display='none'">
@@ -197,7 +196,7 @@
                             </div>
                         </div>
                         <div class="day-schedule">
-                            <div class="day-header">FRI</div>
+                            <div class="day-header">FRIDAY</div>
                             <div class="time-slot">
                                 <div class="band-thumbnail">
                                     <img src="assets/bands/martian-funk-syndicate.jpg" alt="Martian Funk Syndicate" onerror="this.style.display='none'">
@@ -222,7 +221,7 @@
                             </div>
                         </div>
                         <div class="day-schedule">
-                            <div class="day-header">SAT</div>
+                            <div class="day-header">SATURDAY</div>
                             <div class="time-slot">
                                 <div class="band-thumbnail">
                                     <img src="assets/bands/solar-flare-quartet.jpg" alt="Solar Flare Quartet feat. Orion" onerror="this.style.display='none'">
@@ -252,7 +251,7 @@
         </section>
 
         <!-- Menu Section -->
-        <section id="menu" class="menu">
+        <section id="menu" class="menu fade-in-section">
             <div class="container">
                 <h2 class="section-title">Menu</h2>
                 <div class="menu-display">
@@ -275,7 +274,7 @@
         </section>
 
         <!-- Gallery Section -->
-        <section id="gallery" class="gallery">
+        <section id="gallery" class="gallery fade-in-section">
             <div class="container">
                 <h2 class="section-title">Gallery</h2>
                 <div class="instagram-feed" id="instagram-feed">
@@ -302,7 +301,7 @@
         </section>
 
         <!-- Reservation Section -->
-        <section id="reservation" class="reservation">
+        <section id="reservation" class="reservation fade-in-section">
             <div class="container">
                 <h2 class="section-title">Reservations</h2>
                 <div class="reservation-content">
@@ -385,7 +384,7 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="contact">
+        <section id="contact" class="contact fade-in-section">
             <div class="container">
                 <h2 class="section-title">Contact Us</h2>
                 <div class="contact-content">

@@ -648,3 +648,28 @@ function showInstagramFallback() {
     instagramFeed.style.display = 'none';
     galleryFallback.style.display = 'block';
 }
+
+// Smooth scroll-based animations inspired by Mont Fort
+function observeElements() {
+    const fadeInElements = document.querySelectorAll('.fade-in-section');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    fadeInElements.forEach(element => {
+        observer.observe(element);
+    });
+}
+
+// Initialize animations when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    observeElements();
+});
