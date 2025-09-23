@@ -47,6 +47,7 @@ body {
 /* Enhanced hover effects */
 .btn {
     transition: all 0.3s ease;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><text y="48" font-size="48">🛸</text></svg>'), pointer;
 }
 
 .btn:hover {
@@ -55,10 +56,16 @@ body {
 
 .nav-links a {
     transition: all 0.3s ease;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><text y="48" font-size="48">🛸</text></svg>'), pointer;
 }
 
 .nav-links a:hover {
     transform: translateY(-1px);
+}
+
+/* Flying saucer cursor for all clickable elements */
+a, button, input[type="submit"], [role="button"] {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><text y="48" font-size="48">🛸</text></svg>'), pointer;
 }
 
 html {
@@ -71,6 +78,7 @@ body {
     color: var(--sand-beige);
     background-color: #82231E;
     overflow-x: hidden;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64"><text y="48" font-size="48">🛸</text></svg>'), auto;
 }
 
 /* Color Variables - Inspired by Mars Bar Logo */
@@ -386,17 +394,11 @@ section {
 }
 
 .day-schedule {
-    background: rgba(225, 210, 170, 0.05);
-    border: 1px solid rgba(225, 210, 170, 0.2);
-    border-radius: 8px;
-    padding: 1.5rem;
     transition: all 0.3s ease;
     width: 100%;
 }
 
 .day-schedule:hover {
-    border-color: var(--sand-beige);
-    background: rgba(225, 210, 170, 0.1);
     transform: translateY(-2px);
 }
 
@@ -420,7 +422,6 @@ section {
     padding: 1rem;
     background: rgba(0, 0, 0, 0.3);
     border-radius: 6px;
-    border-left: 3px solid var(--primary-red);
 }
 
 .time-slot:last-child {
