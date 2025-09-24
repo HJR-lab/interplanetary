@@ -309,78 +309,17 @@
                 <h2 class="section-title">Reservations</h2>
                 <div class="reservation-content">
                     <div class="reservation-info">
-                        <p>For reservations, please call us or use our online booking system.</p>
-                        <p class="phone">Phone: <a href="tel:+6596181013">+65 9618 1013</a></p>
+                        <p>For reservations, please use our online booking system.</p>
+
+                        <div class="quandoo-fallback" style="margin-top: 20px;">
+                            <p>Having trouble with the booking widget?</p>
+                            <a href="https://www.quandoo.sg/checkout-widget/widget?&primaryColor=82241e&theme=light&aid=146&utm_source=quandoo-partner&utm_medium=widget-link&merchantId=108257" target="_blank" class="btn btn-primary" style="margin: 10px 0;">Book on Quandoo</a>
+                            <p class="form-note" style="text-align: left;">Or call us directly at <a href="tel:+6596181013">+65 9618 1013</a></p>
+                        </div>
                     </div>
                     <div class="reservation-form">
-                        <form class="booking-form" action="https://formsubmit.co/reservations@themarsbar.sg" method="POST">
-                            <input type="hidden" name="_subject" value="New Reservation Request - The Mars Bar">
-                            <input type="hidden" name="_template" value="table">
-                            <input type="hidden" name="_next" value="https://themarsbar.sg/thank-you">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="date">Date</label>
-                                    <input type="date" id="date" name="date" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="time">Time</label>
-                                    <select id="time" name="time" required>
-                                        <option value="">Select time</option>
-                                        <option value="17:00">5:00 PM</option>
-                                        <option value="17:30">5:30 PM</option>
-                                        <option value="18:00">6:00 PM</option>
-                                        <option value="18:30">6:30 PM</option>
-                                        <option value="19:00">7:00 PM</option>
-                                        <option value="19:30">7:30 PM</option>
-                                        <option value="20:00">8:00 PM</option>
-                                        <option value="20:30">8:30 PM</option>
-                                        <option value="21:00">9:00 PM</option>
-                                        <option value="21:30">9:30 PM</option>
-                                        <option value="22:00">10:00 PM</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="guests">Guests</label>
-                                    <select id="guests" name="guests" required>
-                                        <option value="">Number of guests</option>
-                                        <option value="1">1 Guest</option>
-                                        <option value="2">2 Guests</option>
-                                        <option value="3">3 Guests</option>
-                                        <option value="4">4 Guests</option>
-                                        <option value="5">5 Guests</option>
-                                        <option value="6">6 Guests</option>
-                                        <option value="7">7 Guests</option>
-                                        <option value="8">8 Guests</option>
-                                        <option value="9">9 Guests</option>
-                                        <option value="10">10+ Guests</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="company">Company (Optional)</label>
-                                    <input type="text" id="company" name="company" placeholder="Company name">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="name">Full Name</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" required placeholder="+65 XXXX XXXX">
-                            </div>
-                            <div class="form-group">
-                                <label for="notes">Special Requests</label>
-                                <textarea id="notes" name="notes" rows="3" placeholder="Dietary restrictions, celebrations, seating preferences..."></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary full-width">Book Now</button>
-                            <p class="form-note">You will receive a confirmation email shortly. For immediate assistance, call us at <a href="tel:+6596181013">+65 9618 1013</a></p>
-                        </form>
+                        <div id="quandoo-booking-widget"></div>
+                        <script src="https://booking-widget.quandoo.com/index.js" data-merchant-id="108257" data-theme="light" data-primary-color="82241e"></script>
                     </div>
                 </div>
             </div>
