@@ -1187,6 +1187,11 @@ section {
     .reservation-content {
         grid-template-columns: 1fr;
         gap: 2rem;
+        flex-direction: column-reverse;
+    }
+
+    .reservation-content {
+        display: flex;
     }
 
     .contact-content {
