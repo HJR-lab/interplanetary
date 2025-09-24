@@ -100,21 +100,6 @@ a[href="#menu"],
     transition: all 0.3s ease;
 }
 
-/* Quandoo widget custom styling */
-#quandoo-booking-widget {
-    background-color: var(--sand-beige) !important;
-}
-
-#quandoo-booking-widget * {
-    background-color: var(--sand-beige) !important;
-}
-
-#quandoo-booking-widget .widget-container,
-#quandoo-booking-widget .booking-widget,
-#quandoo-booking-widget .widget-content {
-    background-color: var(--sand-beige) !important;
-}
-
 html {
     scroll-behavior: smooth;
 }
