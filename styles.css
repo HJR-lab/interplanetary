@@ -100,6 +100,17 @@ a[href="#menu"],
     transition: all 0.3s ease;
 }
 
+/* Fix Quandoo widget white pixel issue */
+#quandoo-booking-widget {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+#quandoo-booking-widget iframe {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
 html {
     scroll-behavior: smooth;
 }
