@@ -959,9 +959,11 @@ section {
 
 .reservation-content {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: start;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .reservation-info {
