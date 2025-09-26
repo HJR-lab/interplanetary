@@ -1,32 +1,13 @@
 [
   {
-    "day": "SUN",
-    "timeSlots": [
-      {
-        "time": "8.30PM - 10.15PM",
-        "band": "Lunar Echoes feat. Solis",
-        "genre": "Indie Pop / Dreamwave",
-        "instagram": "@lunarechoes",
-        "thumbnail": "assets/bands/lunar-echoes.jpg"
-      },
-      {
-        "time": "10.30PM - 12.15AM",
-        "band": "Nebulae Nights",
-        "genre": "Space Jazz",
-        "instagram": "@nebulaenights",
-        "thumbnail": "assets/bands/nebulae-nights.jpg"
-      }
-    ]
-  },
-  {
     "day": "MON",
     "timeSlots": [
       {
-        "time": "8.30PM - 12.15AM",
-        "band": "The Crimson Meteors",
-        "genre": "Indie Rock",
-        "instagram": "@crimsonmeteors",
-        "thumbnail": "assets/bands/crimson-meteors.jpg"
+        "time": "7:30PM - 11:30PM",
+        "band": "Dan Sid Solo",
+        "genre": "Indie RockAcoustic Pop-Classics Crossover",
+        "instagram": "@danielsiddy",
+        "thumbnail": "assets/bands/dansiddy.png"
       }
     ]
   },
@@ -34,11 +15,11 @@
     "day": "TUE",
     "timeSlots": [
       {
-        "time": "8.30PM - 12.15AM",
-        "band": "Orbit Oddities feat. Lyra",
-        "genre": "Jazz / Pop Fusion",
-        "instagram": "@orbitoddities",
-        "thumbnail": "assets/bands/orbit-oddities.jpg"
+        "time": "7:30PM - 11:30PM",
+        "band": "Suncitysons",
+        "genre": "Universal Bilingual Favourites",
+        "instagram": "@suncitysons",
+        "thumbnail": "assets/bands/suncitysons.jpg"
       }
     ]
   },
@@ -46,18 +27,11 @@
     "day": "WED",
     "timeSlots": [
       {
-        "time": "8.30PM - 10.15PM",
-        "band": "Red Dust Trio",
-        "genre": "Cosmic Jazz",
-        "instagram": "@reddusttrio",
-        "thumbnail": "assets/bands/red-dust-trio.jpg"
-      },
-      {
-        "time": "10.30PM - 12.15AM",
-        "band": "Astroflora",
-        "genre": "Psychedelic Soul",
-        "instagram": "@astroflora",
-        "thumbnail": "assets/bands/astroflora.jpg"
+        "time": "7:30PM - 11:30PM",
+        "band": "Havana Social",
+        "genre": "Upbeat Latin Dance Hits",
+        "instagram": "@havanasocialclubasia",
+        "thumbnail": "assets/bands/havanasocialclubasia.jpg"
       }
     ]
   },
@@ -65,18 +39,11 @@
     "day": "THU",
     "timeSlots": [
       {
-        "time": "8.30PM - 10.15PM",
-        "band": "Starlight Caravan feat. Vega",
-        "genre": "Folk / Soul",
-        "instagram": "@starlightcaravan",
-        "thumbnail": "assets/bands/starlight-caravan.jpg"
-      },
-      {
-        "time": "10.30PM - 1.00AM",
-        "band": "Zero Gravity Club",
-        "genre": "Electronic Indie",
-        "instagram": "@zerogravityclub",
-        "thumbnail": "assets/bands/zero-gravity-club.jpg"
+        "time": "7:30PM - 11:30PM",
+        "band": "A Group Of People",
+        "genre": "Pop and Bilingual Classics",
+        "instagram": "@agopsg",
+        "thumbnail": "assets/bands/agopsg.jpg"
       }
     ]
   },
@@ -84,18 +51,11 @@
     "day": "FRI",
     "timeSlots": [
       {
-        "time": "8.00PM - 10.45PM",
-        "band": "Martian Funk Syndicate",
-        "genre": "Jazz / Soul / Funk",
-        "instagram": "@martianfunksyn",
-        "thumbnail": "assets/bands/martian-funk-syndicate.jpg"
-      },
-      {
-        "time": "11.00PM - Till Late",
-        "band": "The Mars Tones",
-        "genre": "Electronic Pop",
-        "instagram": "@themarstones",
-        "thumbnail": "assets/bands/mars-tones.jpg"
+        "time": "7:30PM - 11:30PM",
+        "band": "One Mic Stand",
+        "genre": "Crowd Favourite Grooves",
+        "instagram": "",
+        "thumbnail": "assets/bands/onemicstand.jpg"
       }
     ]
   },
@@ -103,18 +63,23 @@
     "day": "SAT",
     "timeSlots": [
       {
-        "time": "8.00PM - 10.45PM",
-        "band": "Solar Flare Quartet feat. Orion",
-        "genre": "Jazz / Funk / Experimental",
-        "instagram": "@solarflarequar",
-        "thumbnail": "assets/bands/solar-flare-quartet.jpg"
-      },
+        "time": "7:30PM - 11:30PM",
+        "band": "Melissa and The Usual Suspects",
+        "genre": "Top 40 Party Hits",
+        "instagram": "@melissausualsuspects",
+        "thumbnail": "assets/bands/melissausualsuspects.jpg"
+      }
+    ]
+  },
+  {
+    "day": "SUN",
+    "timeSlots": [
       {
-        "time": "11.00PM - Till Late",
-        "band": "Alien Disco Ensemble",
-        "genre": "Space Pop / Synth Funk",
-        "instagram": "@aliendiscoens",
-        "thumbnail": "assets/bands/alien-disco-ensemble.jpg"
+        "time": "7:30PM - 11:30PM",
+        "band": "Surath Godfrey and Friends",
+        "genre": "Acoustic Jams",
+        "instagram": "",
+        "thumbnail": "assets/bands/surathgodfrey.jpg"
       }
     ]
   }
