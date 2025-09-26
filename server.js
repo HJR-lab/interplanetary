@@ -144,21 +144,21 @@ app.get('/api/instagram-feed', async (req, res) => {
         const samplePosts = [
             {
                 id: '1',
-                media_url: 'assets/gallery/post1.svg',
+                media_url: 'assets/gallery/post1.jpg',
                 permalink: 'https://instagram.com/themarsbarsg',
                 caption: 'Latest from The Mars Bar #themarsbarsg',
                 media_type: 'IMAGE'
             },
             {
                 id: '2',
-                media_url: 'assets/gallery/post2.svg',
+                media_url: 'assets/gallery/post2.jpg',
                 permalink: 'https://instagram.com/themarsbarsg',
                 caption: 'Great evening at The Mars Bar',
                 media_type: 'IMAGE'
             },
             {
                 id: '3',
-                media_url: 'assets/gallery/post3.svg',
+                media_url: 'assets/gallery/post3.jpg',
                 permalink: 'https://instagram.com/themarsbarsg',
                 caption: 'Live music tonight #marsbar',
                 media_type: 'IMAGE'

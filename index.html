@@ -258,19 +258,39 @@
             <div class="container">
                 <h2 class="section-title">Menu</h2>
                 <div class="menu-display">
-                    <div class="menu-image-container">
-                        <div class="menu-pdf-display">
-                            <iframe src="assets/menu.pdf" class="menu-pdf-iframe" title="The Mars Bar Menu"></iframe>
-                            <div class="menu-pdf-overlay" onclick="openMenuPDF()">
-                                <p>Click to open full menu</p>
+                    <div class="menu-columns">
+                        <div class="menu-column">
+                            <h3 class="menu-column-title">Brunch</h3>
+                            <div class="menu-image-container">
+                                <div class="menu-pdf-display">
+                                    <iframe src="assets/brunchmenu.pdf" class="menu-pdf-iframe" title="The Mars Bar Brunch Menu"></iframe>
+                                    <div class="menu-pdf-overlay" onclick="openBrunchMenuPDF()">
+                                        <p>Click to open brunch menu</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-download">
+                                <a href="assets/brunchmenu.pdf" target="_blank" class="btn btn-primary menu-pdf-btn" download>
+                                    <span>📄</span> Download Brunch Menu (PDF)
+                                </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="menu-download">
-                        <a href="assets/menu.pdf" target="_blank" class="btn btn-primary menu-pdf-btn" download>
-                            <span>📄</span> Download Menu (PDF)
-                        </a>
-                        <p class="menu-note">Click the menu image above to view or download below to save</p>
+                        <div class="menu-column">
+                            <h3 class="menu-column-title">Dinner</h3>
+                            <div class="menu-image-container">
+                                <div class="menu-pdf-display">
+                                    <iframe src="assets/dinnermenu.pdf" class="menu-pdf-iframe" title="The Mars Bar Dinner Menu"></iframe>
+                                    <div class="menu-pdf-overlay" onclick="openDinnerMenuPDF()">
+                                        <p>Click to open dinner menu</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="menu-download">
+                                <a href="assets/dinnermenu.pdf" target="_blank" class="btn btn-primary menu-pdf-btn" download>
+                                    <span>📄</span> Download Dinner Menu (PDF)
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -284,16 +304,31 @@
                     <!-- Instagram posts will be loaded here -->
                     <div class="loading-message">Loading Instagram feed...</div>
                 </div>
-                <div class="gallery-fallback" id="gallery-fallback" style="display: none;">
+                <div class="gallery-fallback" id="gallery-fallback" style="display: block;">
                     <div class="gallery-grid">
                         <div class="gallery-item">
-                            <div class="image-placeholder">Latest Posts</div>
+                            <a href="https://instagram.com/themarsbarsg" target="_blank" rel="noopener">
+                                <img src="assets/gallery/post1.jpg" alt="Latest from The Mars Bar" class="gallery-img">
+                                <div class="gallery-overlay">
+                                    <span class="gallery-icon">📷</span>
+                                </div>
+                            </a>
                         </div>
                         <div class="gallery-item">
-                            <div class="image-placeholder">@themarsbarsg</div>
+                            <a href="https://instagram.com/themarsbarsg" target="_blank" rel="noopener">
+                                <img src="assets/gallery/post2.jpg" alt="The Mars Bar atmosphere" class="gallery-img">
+                                <div class="gallery-overlay">
+                                    <span class="gallery-icon">📷</span>
+                                </div>
+                            </a>
                         </div>
                         <div class="gallery-item">
-                            <div class="image-placeholder">Follow Us</div>
+                            <a href="https://instagram.com/themarsbarsg" target="_blank" rel="noopener">
+                                <img src="assets/gallery/post3.jpg" alt="Live music at The Mars Bar" class="gallery-img">
+                                <div class="gallery-overlay">
+                                    <span class="gallery-icon">📷</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>

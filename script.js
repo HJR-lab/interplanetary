@@ -387,6 +387,14 @@ function openMenuPDF() {
     window.open('assets/menu.pdf', '_blank');
 }
 
+function openBrunchMenuPDF() {
+    window.open('assets/brunchmenu.pdf', '_blank');
+}
+
+function openDinnerMenuPDF() {
+    window.open('assets/dinnermenu.pdf', '_blank');
+}
+
 // Revolving background images functionality
 function setRevolvingBackground() {
     const heroSection = document.querySelector('.hero');
