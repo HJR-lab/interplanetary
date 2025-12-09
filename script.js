@@ -388,11 +388,11 @@ function openMenuPDF() {
 }
 
 function openBrunchMenuPDF() {
-    window.open('assets/brunchmenu.pdf', '_blank');
+    window.open('assets/tmbbrunchmenu.pdf', '_blank');
 }
 
 function openDinnerMenuPDF() {
-    window.open('assets/dinnermenu.pdf', '_blank');
+    window.open('assets/tmbdinnermenu.pdf', '_blank');
 }
 
 // Revolving background images functionality
